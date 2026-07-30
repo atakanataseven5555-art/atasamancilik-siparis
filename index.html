@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#090a0f" />
+    <title>Gelişmiş Ses — Ses Stüdyosu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <header class="site-header shell">
+      <a class="brand" href="#" aria-label="Gelişmiş Ses ana sayfa">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+        <span>GELİŞMİŞ <b>SES</b></span>
+      </a>
+      <nav aria-label="Ana menü">
+        <a class="active" href="#studio">Stüdyo</a>
+        <a href="#features">Özellikler</a>
+        <a href="#about">Hakkında</a>
+      </nav>
+      <button class="outline-button" id="headerRecord"><span></span> Kayıt oluştur</button>
+    </header>
+
+    <main>
+      <section class="hero shell" id="studio">
+        <div class="eyebrow"><span></span> SESİN, SENİN İMZAN</div>
+        <h1>Sesini özgür bırak.<br /><em>Gerisini biz hallederiz.</em></h1>
+        <p>Stüdyo kalitesinde kayıt, akıllı gürültü temizleme ve kusursuz ses — tek bir yerde.</p>
+
+        <div class="studio-card">
+          <div class="studio-topline">
+            <div class="status"><span></span><b id="statusText">KAYDA HAZIR</b></div>
+            <div class="timer" id="timer">00:00:00</div>
+            <button class="more-button" aria-label="Daha fazla seçenek">•••</button>
+          </div>
+
+          <div class="visualizer" id="visualizer" aria-label="Ses dalgası görselleştiricisi"></div>
+
+          <div class="studio-controls">
+            <button class="round-button" id="micButton" aria-label="Mikrofonu aç veya kapat">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15.5a3.5 3.5 0 0 0 3.5-3.5V5a3.5 3.5 0 1 0-7 0v7a3.5 3.5 0 0 0 3.5 3.5Z"/><path d="M5.5 11.5V12a6.5 6.5 0 0 0 13 0v-.5M12 18.5V22M9 22h6"/></svg>
+            </button>
+            <button class="record-button" id="recordButton" aria-label="Kaydı başlat">
+              <span class="record-core"></span>
+              <span class="record-label">KAYDI BAŞLAT</span>
+            </button>
+            <button class="round-button" id="settingsButton" aria-label="Ses ayarları">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h2M10 17h10M14 4v6M6 14v6"/></svg>
+            </button>
+          </div>
+
+          <div class="settings-panel" id="settingsPanel" hidden>
+            <label>Giriş seviyesi <input id="inputLevel" type="range" min="10" max="100" value="72" /></label>
+            <label>Gürültü engelleme <input id="noiseReduction" type="checkbox" checked /><span class="switch"></span></label>
+          </div>
+
+          <div class="studio-footer">
+            <div><span>GİRİŞ</span><b>MacBook Mikrofonu</b></div>
+            <div><span>KALİTE</span><b>48 kHz · 24 bit</b></div>
+            <div><span>FORMAT</span><b>WAV</b></div>
+          </div>
+        </div>
+
+        <div class="trust-row" aria-label="Ürün avantajları">
+          <div><span class="icon-spark">✦</span><p><b>Yapay zekâ destekli</b><small>Anlık ses iyileştirme</small></p></div>
+          <div><span class="icon-ring">◉</span><p><b>Stüdyo kalitesi</b><small>48 kHz · 24 bit kayıt</small></p></div>
+          <div><span class="icon-shield">◇</span><p><b>Tamamen gizli</b><small>Sesin cihazında kalır</small></p></div>
+        </div>
+      </section>
+
+      <section class="features shell" id="features">
+        <div class="section-heading"><span>NEDEN GELİŞMİŞ SES?</span><h2>Her detayda daha iyi ses.</h2></div>
+        <div class="feature-grid">
+          <article><span>01</span><h3>Temiz kayıt</h3><p>Arka plan gürültüsünü akıllıca temizler, sesini doğal hâliyle öne çıkarır.</p></article>
+          <article><span>02</span><h3>Anında hazır</h3><p>Kurulum yok, karmaşa yok. Mikrofonunu seç ve saniyeler içinde kayda başla.</p></article>
+          <article><span>03</span><h3>Profesyonel çıktı</h3><p>Podcast, müzik ve toplantılar için yüksek çözünürlüklü WAV kayıtları.</p></article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="shell" id="about"><span>© 2026 GELİŞMİŞ SES</span><span>İYİ SES, İYİ HİSSETTİRİR.</span></footer>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
